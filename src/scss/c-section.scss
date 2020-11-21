@@ -1,0 +1,46 @@
+/* .c-section
+-----------------------------------------------------------*/
+$r: ".c-section";
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: grid;
+  grid-gap: $size * 2;
+  grid-template-rows: minmax($size * 16, min-content) 1fr minmax($size * 16, min-content);
+
+  // element
+  //---------------------------------------------------------
+  &__item {
+    padding: $size * 2;
+    border: 1px dashed $gray-dark;
+    border-radius: $border-radius;
+    background-color: $gray-light;
+  }
+
+  &__message {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: $gray-pale;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+
+  &__text {
+    font-weight: 300;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

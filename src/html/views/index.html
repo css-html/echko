@@ -1,0 +1,58 @@
+<% var data = {
+    title: "Index | Viceroy",
+    keywords: "...",
+    description: "...",
+}; %><%= _.template(require('./../includes/template-start.html').default)(data) 
+%>
+
+
+<div class="l-app">
+  <%= 
+    _.template(require('./../includes/l-header.html').default)(data) 
+  %>
+
+  <%= 
+    _.template(require('./../includes/l-aside.html').default)(data) 
+  %>
+
+  <main class="l-main">
+    <div class="c-section">
+      <div class="c-section__item c-section__header">
+        <div class="c-section__message">
+          <div class="c-section__title">
+            Header
+          </div>
+          <div class="c-section__text">
+            Includes the titlle and the top bar.
+          </div>
+        </div>
+      </div>
+      <div class="c-section__item c-section__main">
+        <div class="c-section__message">
+          <div class="c-section__title">
+            Add sections
+          </div>
+          <div class="c-section__text">
+            Here is the core of your page.
+          </div>
+        </div>
+      </div>
+      <div class="c-section__item c-section__footer">
+        <div class="c-section__message">
+          <div class="c-section__title">
+            Footer
+          </div>
+          <div class="c-section__text">
+            Additional info goes here.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+<%= 
+  _.template(require('./../includes/template-end.html').default)(data) 
+%>

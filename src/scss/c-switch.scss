@@ -1,0 +1,89 @@
+/* .c-switch
+-------------------------------------------------------------*/
+$r: ".c-switch";
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  
+  // element
+  //---------------------------------------------------------
+  &__label {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+
+  &__icon {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: $size * 8;
+    height: $size * 4;
+    color: $gray-dark;
+    position: relative;
+    box-sizing: content-box;
+    border-radius: $size * 3;
+    border: 2px solid rgba(0,0,0,0);
+    box-shadow: 0 0 0 1px $gray;
+
+    &:after {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      border-radius: 100%;
+      background-color: $theme-color;
+      transition: transform 0.3s;
+    }
+
+    .icon {
+      z-index: 1;
+      position: relative;
+      transition: color 0.3s;
+
+      &:nth-of-type(1) {
+        color: $white;
+      }
+
+      &:nth-of-type(2) {
+        color: $gray-dark;
+      }
+    }
+  }
+
+  :checked ~ #{$r}__icon {
+
+    .icon {
+
+      &:nth-of-type(1) {
+        color: $gray-dark;
+      }
+
+      &:nth-of-type(2) {
+        color: $white;
+      }
+    }
+
+    &:after {
+      transform: translateX(100%);
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

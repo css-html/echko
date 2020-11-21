@@ -1,0 +1,32 @@
+$r: ".l-app";
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: grid;
+  grid-gap: $size * 2;
+  grid-template-rows: $size * 6 1fr;
+  grid-template-columns: $size * 45 1fr;
+  grid-template-areas:
+    "header header"
+    "aside main";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: $size * 2;
+  position: absolute;
+  scroll-behavior: smooth;
+
+  @media (min-width: 1025px) {
+    position: fixed;
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

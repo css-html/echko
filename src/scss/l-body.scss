@@ -1,0 +1,25 @@
+$r: ".l-body";
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  color: $body-color;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  font-family: $body-font-family;
+  display: none;
+
+  @media (min-width: 1280px) {
+    display: block;
+  }
+
+  // element
+  //---------------------------------------------------------
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

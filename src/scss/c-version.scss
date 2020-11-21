@@ -1,0 +1,62 @@
+/* .c-version
+-----------------------------------------------------------*/
+$r: ".c-version";
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  align-items: center;
+
+  // element
+  //---------------------------------------------------------
+  > * {
+    margin-right: $size * 2;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__back {
+    display: flex;
+    cursor: pointer;
+    font-size: 18px;
+    color: $theme-color;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $body-color;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    color: $gray-pale;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+    transition: color 0.3s;
+
+    .icon {
+      font-size: 10px;
+      margin-left: $size;
+    }
+
+    &:hover {
+      color: $body-color;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------
